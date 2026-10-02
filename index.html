@@ -30,9 +30,12 @@ header.brand{display:flex;align-items:center;justify-content:space-between;gap:1
 .progress>div{height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--peri));transition:width .35s ease}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 1px 2px rgba(20,30,60,.04)}
 @media (max-width:560px){.card{padding:20px}}
-h1{font-size:30px;line-height:1.2;color:var(--navy);margin:0 0 12px}
-h2{font-size:22px;color:var(--navy);margin:0 0 6px}
-h3{font-size:17px;margin:0 0 8px;color:var(--ink)}
+h1{font-size:32px;line-height:1.18;font-weight:700;letter-spacing:-.01em;color:var(--navy);margin:0 0 14px;max-width:30ch}
+h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--peri);margin-top:16px}
+@media (max-width:560px){h1{font-size:26px}}
+h2{font-size:23px;line-height:1.25;font-weight:700;letter-spacing:-.005em;color:var(--navy);margin:0 0 8px}
+h3{font-size:17px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+h1:focus,h2:focus{outline:none}
 p.lead{font-size:18px;color:var(--muted);margin:0 0 18px}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--peri);margin-bottom:6px}
 .ps{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
@@ -225,7 +228,7 @@ const CONFIG = {
   // Google Apps Script Web App URL (ends in /exec). Leave "" to run without saving.
   ENDPOINT_URL: "",
   // Call to action shown on the results page
-  CTA_URL: "https://www.aimava.com/contact",          // ← replace with your booking link
+  CTA_URL: "https://calendly.com/andrew-gaule/30min",
   CTA_LABEL: "Book a 30-minute results conversation",
   SECONDARY_URL: "",                                   // e.g. programme or workshop page; "" hides it
   SECONDARY_LABEL: "Explore AI strategy workshops",
