@@ -617,7 +617,7 @@ document.getElementById("contactForm").addEventListener("submit", async e=>{
     page: location.origin + location.pathname, ...getUtm(),
     website: v("f_website") // honeypot — should be empty
   };
-  await send(payload);
+  send(payload); // saves in the background (keepalive) so results show instantly
   renderResults(r, contact);
   show(stepsOrder.indexOf("results"));
   btn.disabled = false; btn.textContent = "See my results →";
